@@ -1,0 +1,73 @@
+{
+    "name": "DarkNPbot",
+    "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp.",
+    "logo": "https://telegra.ph/file/7b1d5410fbcc9b77f7a18.jpg",
+    "keywords": ["whatsapp", "userbot", "DarkNP"],
+    "repository": "https://github.com/PYMaster-ft/DakNPbot.git",
+    "website":   "https://darknp.com",
+    "success_url": "https://t.me/datknpsupport",
+    "stack": "container",
+    "env": {
+        "ASENA_SESSION": {
+            "description": "QR එක ස්කෑන් කල විට ලැබෙන් කේතය. Type here yours Session.",
+            "required": true
+        },
+        "SUDO": {
+            "description": "Sudo mode; ඔබේ අංකය ජාත්‍යන්තර අංකයක් විය යුතුය. එබැවින් රටේ කේතයෙන් පසුව ඔබේ අංකය තිබිය යුතුය. උදාහරණය: 1205xxxxxxxxx (USA අංකය +1)",
+            "required": false
+        },
+        "LANGUAGE": {
+            "description": "EN ,SI හෝ යොදන්න.. ඉදිරියේ තවත් භාෂා නිකුත් කෙරේ",
+            "required": true,
+            "value": "SI"
+        },
+        "HANDLERS": {
+            "description": "විධාන සදහා . For commands.",
+            "required": true,
+            "value": "^[.]"
+        },
+        "SEND_READ": {
+            "description": "seen කිරීමට අවශ්‍ය නම් මෙලෙසම තබන්න  Write true if you want to throw seen.",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU": {
+            "description": "වෙනස් නොකරන්න! Do not change",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU_API_KEY": {
+            "description": "හෙරොකු api එක. Heroku API Key.",
+            "required": true
+        },
+        "HEROKU_APP_NAME": {
+            "description": "ඔබ එකතූකල ඇප් නාමය. Heroku APP Name.",
+            "required": true
+        },
+        "DEBUG": {
+            "description": "වෙනස් කිරීමට අවශ්‍ය නැත.",
+            "required": true,
+            "value": "false"
+        },
+        "REMOVE_BG_API_KEY": {
+            "description": "මෙම වෙබ් අඩවියෙන් ඔබගේ api එක සාදාගන්න. https://remove.bg",
+            "required": false
+        },
+        "NO_ONLINE": {
+            "description": "ඔබ සෑම විටම Online සිටින බව නොපෙන්වීමට true ලෙස ටයිප් කරන්න. Type true if you don't want to appear online.",
+            "required": false,
+            "value": "true"
+        },
+        "COFFEEHOUSE_API_KEY": {
+            "description": "CoffeeHouse API Key. Need for Lydia. https://coffeehouse.intellivoid.net/",
+            "required": false,
+            "value": "true"
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }
